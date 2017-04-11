@@ -1,0 +1,14 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "editor.fontFamily": "'Fira Code'",
+    
+    "editor.renderWhitespace": "boundary",
+
+    "editor.fontLigatures": true,
+
+    "editor.insertSpaces": false,
+
+    "terminal.external.linuxExec": "gnome-terminal",
+
+    "terminal.integrated.shell.linux": "/usr/bin/zsh"
+}
