@@ -160,12 +160,12 @@ bindsym $mod+r mode "resize"
 #bar {
 #	i3bar_command i3bar -t
 #	status_command i3status
-#
+
 #	position top
-#
+
 #	tray_output none
-#
-#
+
+
 #	colors {
 #		background #202020A0
 #
@@ -181,12 +181,21 @@ bindsym $mod+r mode "resize"
 gaps inner 32
 
 for_window [class="^.*"] border pixel 0
+new_window normal
+#
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+#
+bindsym $mod+Shift+a move workspace to output left
+#
+assign [class="discord"] 4
+#
 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 exec --no-startup-id compton
 
-exec_always --no-startup-id feh --bg-fill "/home/dnaf/Wallpapers/Foggy Buildings.jpg"
+exec_always --no-startup-id feh --bg-fill "/home/dnaf/Wallpapers/flower stuff.jpg"
 
 exec_always --no-startup-id [ ! -s ~/.config/mpd/pid ] && mpd
 

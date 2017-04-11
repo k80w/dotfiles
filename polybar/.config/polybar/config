@@ -6,53 +6,69 @@
 ;   The README contains alot of information
 ;
 ;=====================================================
+[base16]
+base00 = #1d1f21
+base01 = #282a2e
+base02 = #373b41
+base03 = #969896
+base04 = #b4b7b4
+base05 = #c5c8c6
+base06 = #e0e0e0
+base07 = #ffffff
+base08 = #CC342B
+base09 = #F96A38
+base0A = #FBA922
+base0B = #198844
+base0C = #3971ED
+base0D = #3971ED
+base0E = #A36AC7
+base0F = #3971ED
 
 [colors]
-background = #aa222222
-background-alt = #444
-foreground = #dfdfdf
-foreground-alt = #55
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+background = #c0000000
+background-alt = ${base16.base02}
+foreground = ${base16.base07}
+foreground-alt = ${base16.base03}
+primary = ${base16.base0C}
+secondary = ${base16.base0B}
+alert = ${base16.base0A}
 
 [global/wm]
 margin-top = 5
 margin-bottom = 5
 
 [bar/example]
-;monitor = ${env:MONITOR:HDMI-1}
+monitor = ${env:MONITOR:HDMI-0}
 width = 100%
 height = 27
 offset-x = 0
 offset-y = 0
 
-;background = ${xrdb:color9}
 background = ${colors.background}
 foreground = ${colors.foreground}
 
 overline-size = 2
 overline-color = #f00
-underline-size = 2
+underline-size = 0
 underline-color = #00f
 
-border-bottom = 2
-border-bottom-color = #333
+border-bottom = 0
+border-bottom-color = ${base16.base03}
 
 spacing = 1
 padding-left = 0
-padding-right = 2
+padding-right = 4
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = firacode:size=10:fontformat=truetype
-font-1 = fixed:pixelsize=12;0
+font-0 = firasansextralight:size=12:fontformat=truetype
+font-1 = firacode:size=12:fontformat=truetype
 font-2 = unifont:size=1:heavy:fontformat=truetype;-2
 font-3 = siji:pixelsize=10;0
 
 modules-left = bspwm i3 xwindow
 modules-center = mpd
-modules-right = volume memory cpu eth date powermenu
+modules-right = ping pkg eth volume date powermenu
 
 tray-position = none
 tray-padding = 2
@@ -70,6 +86,54 @@ tray-padding = 2
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
 
+[bar/secondary]
+monitor = ${env:MONITOR:DVI-1}
+width = 100%
+height = 27
+offset-x = 0
+offset-y = 0
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+overline-size = 2
+overline-color = #f00
+underline-size = 0
+underline-color = #00f
+
+border-bottom = 0
+border-bottom-color = ${base16.base03}
+
+spacing = 1
+padding-left = 0
+padding-right = 4
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = firasansextralight:size=12:fontformat=truetype
+font-1 = firacode:size=12:fontformat=truetype
+font-2 = unifont:size=1:heavy:fontformat=truetype;-2
+font-3 = siji:pixelsize=10;0
+
+modules-left = i3 xwindow
+modules-center = filesystem
+modules-right = cpu memory
+
+tray-position = none
+tray-padding = 2
+;tray-transparent = true
+;tray-background = #0063ff
+
+;wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
 
 [module/xwindow]
 type = internal/xwindow
@@ -95,10 +159,9 @@ type = internal/fs
 interval = 25
 
 mount-0 = /
-mount-1 = /home
-mount-2 = /invalid/mountpoint
+mount-1 = /mnt/win
 
-label-mounted = %mountpoint%: %percentage_free%
+label-mounted = %mountpoint%: %percentage_used%;
 
 label-unmounted = %mountpoint%: not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
@@ -128,6 +191,8 @@ type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
+
+pin-workspaces = true
 
 label-mode-padding = 2
 label-mode-foreground = #000
@@ -254,7 +319,7 @@ label-disconnected-foreground = ${colors.foreground-alt}
 type = internal/date
 interval = 5
 
-date =
+date = %Y-%m-%d
 date-alt = " %Y-%m-%d"
 
 time = %H:%M
@@ -264,7 +329,7 @@ format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
-label = %date% %time%
+label = %time%
 
 [module/volume]
 type = internal/volume
@@ -344,9 +409,9 @@ ramp-foreground = ${colors.foreground-alt}
 [module/powermenu]
 type = custom/menu
 
-label-open =  power
+label-open = power
 label-open-foreground = ${colors.secondary}
-label-close =  cancel
+label-close = cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
@@ -359,11 +424,23 @@ menu-0-1-exec = menu-open-2
 menu-1-0 = cancel
 menu-1-0-exec = menu-open-0
 menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
+menu-1-1-exec = reboot
 
 menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
+menu-2-0-exec = poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
+
+[module/ping]
+type = custom/script
+
+exec = ping 8.8.4.4 -n -c 1 | grep -oP "(?<=time=)[0-9\.]* ms"
+interval = 1
+
+[module/pkg]
+type = custom/script
+interval = 600
+exec = .config/polybar/pkg.sh
+exec-if = "ping -q -w 2 -c 1 8.8.4.4 > /dev/null"
 
 ; vim:ft=dosini

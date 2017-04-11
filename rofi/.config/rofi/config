@@ -8,5 +8,5 @@ rofi.padding: 300px
 rofi.fullscreen: true
 
 rofi.color-enabled: true
-rofi.color-window:	argb:50000000,	argb:0000000,	argb:00000000
+rofi.color-window:	argb:a0000000,	argb:0000000,	argb:00000000
 rofi.color-normal:	argb:0000000,	#FFFFFF,	argb:0000000,	#FFFFFF,	#000000
