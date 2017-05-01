@@ -1,26 +1,39 @@
 // Place your settings in this file to overwrite the default settings
 {
 	"editor.fontFamily": "'Fira Code'",
+	"editor.fontSize": 12,
+	"editor.fontLigatures": true,
 
 	"editor.renderWhitespace": "boundary",
-
-	"editor.fontLigatures": true,
+	"editor.renderLineHighlight": "gutter",
 
 	"editor.insertSpaces": false,
 
-	"terminal.external.linuxExec": "gnome-terminal",
-
+	"terminal.external.linuxExec": "lilyterm",
 	"terminal.integrated.shell.linux": "/usr/bin/zsh",
-
-	"editor.renderLineHighlight": "gutter",
+	"terminal.integrated.fontSize": 12,
 
 	"git.confirmSync": false,
 
 	"eslint.autoFixOnSave": true,
 
-	"editor.fontSize": 12,
-
 	"workbench.iconTheme": "vscode-icons",
 
-	"workbench.welcome.enabled": true
+	"workbench.welcome.enabled": true,
+	"[cpp]": {
+		"editor.quickSuggestions": false
+	},
+	"[c]": {
+		"editor.quickSuggestions": false
+	},
+	"editor.fontWeight": "300",
+	"editor.rulers": [
+		80,
+		120
+	],
+	"editor.roundedSelection": false,
+	"editor.minimap.enabled": true,
+	"editor.minimap.renderCharacters": false,
+	"editor.acceptSuggestionOnEnter": false,
+	"editor.renderControlCharacters": true
 }
