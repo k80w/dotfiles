@@ -58,7 +58,7 @@ modules-right = ping pkg eth volume date time powermenu
 
 tray-position = none
 
-override-redirect = true
+override-redirect = false
 wm-restack = i3
 
 scroll-up = i3wm-wsnext
@@ -94,7 +94,7 @@ modules-right = cpu memory
 
 tray-position = none
 
-override-redirect = true
+override-redirect = false
 wm-restack = i3
 
 scroll-up = i3wm-wsnext
