@@ -1,20 +1,20 @@
 [base16]
-base00 = #1d1f21
-base01 = #282a2e
-base02 = #373b41
-base03 = #969896
-base04 = #b4b7b4
-base05 = #c5c8c6
-base06 = #e0e0e0
-base07 = #ffffff
-base08 = #CC342B
-base09 = #F96A38
-base0A = #FBA922
-base0B = #198844
-base0C = #3971ED
-base0D = #3971ED
-base0E = #A36AC7
-base0F = #3971ED
+base00 = #1b1918
+base01 = #2c2421
+base02 = #68615e
+base03 = #766e6b
+base04 = #9c9491
+base05 = #a8a19f
+base06 = #e6e2e0
+base07 = #f1efee
+base08 = #f22c40
+base09 = #df5320
+base0A = #c38418
+base0B = #7b9726
+base0C = #3d97b8
+base0D = #407ee7
+base0E = #6666ea
+base0F = #c33ff3
 
 [colors]
 background = #00000000
@@ -148,6 +148,11 @@ label-visible-padding = ${self.label-focused-padding}
 
 [module/mpd]
 type = internal/mpd
+
+host = 127.0.0.1
+port = 6600
+
+interval = 1
 
 format-online = <label-song> <bar-progress> <label-time>
 
