@@ -10,4 +10,6 @@ pactl load-module module-x11-bell sample=x11-bell display=$DISPLAY
 
 export QT_QPA_PLATFORMTHEME=gtk2
 
+xrdb -merge ~/.Xresources
+
 exec i3

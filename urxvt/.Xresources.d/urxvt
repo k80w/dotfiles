@@ -1,0 +1,3 @@
+URxvt*font: xft:firamono:size=9
+URxvt*scrollBar: false
+

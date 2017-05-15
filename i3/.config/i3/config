@@ -35,7 +35,7 @@ bindsym $mod+c move position center
 bindsym $mod+Print exec --no-startup-id maim -s -u | xclip -selection clipboard -t image/png
 
 # start a terminal
-bindsym $mod+Return exec lilyterm
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
