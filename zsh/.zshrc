@@ -96,5 +96,6 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 source $ZSH/oh-my-zsh.sh
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
+export NPM_PACKAGES="${HOME}/.npm-packages"
 export GOPATH=/home/dnaf/go
-export PATH=$PATH:${GOPATH//://bin:}/bin
+export PATH=$PATH:$NPM_PACKAGES/bin:${GOPATH//://bin:}/bin
