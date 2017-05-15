@@ -14,9 +14,11 @@ call vundle#end()
 filetype plugin indent on
 
 let base16colorspace=256
+set background=dark
 colorscheme base16-google-dark
 
 set number
 set cursorline
 set tabstop=4
+syntax enable
 
