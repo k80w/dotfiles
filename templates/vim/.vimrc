@@ -25,3 +25,5 @@ set cursorline
 set tabstop=4
 syntax enable
 
+" Save w/ sudo
+cmap w!! w !sudo tee > /dev/null %
