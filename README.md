@@ -33,3 +33,5 @@ stow -d packages -t ~ [package name]
 ```
 
 `-d packages` tells stow to grab the package from `packages/` and `-t ~` tells stow to put them in your home directory.
+
+Note that if you rebuild the templates, you don't need to run Stow again.
