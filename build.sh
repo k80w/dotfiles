@@ -33,3 +33,7 @@ do
 		cp $file $dest
 	fi
 done
+
+# i mean this WORKS
+# not exactly elegant code
+/bin/bash ~/.config/base16-shell/scripts/base16-$(basename ${1%%.yml}).sh 2>/dev/null
