@@ -23,6 +23,24 @@ set laststatus=2
 " Makes airline use the terminal theme
 let g:airline_theme='term'
 
+" Characters stuff
+let g:airline_powerline_fonts = 0
+if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline_symbols.crypt = '🔒 '
+let g:airline_symbols.linenr = ''
+let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.branch = '$'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.spell = ''
+let g:airline_symbols.notexists = 'x'
+let g:airline_symbols.whitespace = '-'
+
 " Base16 stuff
 let base16colorspace=256
 colorscheme base16-default-dark " Doesn't matter which base16 theme we choose unless we're in gvim
