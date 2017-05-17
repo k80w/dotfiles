@@ -11,6 +11,7 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'fatih/vim-go'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'dnaf/vim-ckb'
 "
 
 call vundle#end()
@@ -29,7 +30,13 @@ colorscheme base16-default-dark " Doesn't matter which base16 theme we choose un
 set number
 set cursorline
 set tabstop=4
+set shiftwidth=4
 syntax enable
+
+" Woo colors
+hi LineNr ctermbg=0 ctermfg=19
+hi CursorLine ctermbg=18
+hi CursorLineNr ctermbg=18 ctermfg=0
 
 " Save w/ sudo
 cmap w!! w !sudo tee > /dev/null %
