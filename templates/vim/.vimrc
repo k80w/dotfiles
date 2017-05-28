@@ -11,7 +11,6 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'fatih/vim-go'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'dnaf/vim-ckb'
 "
 
 call vundle#end()
@@ -19,9 +18,10 @@ filetype plugin indent on
 
 " Makes airline work
 set laststatus=2
-
 " Makes airline use the terminal theme
 let g:airline_theme='term'
+" Makes airline cool
+set ttimeoutlen=50
 
 " Characters stuff
 let g:airline_powerline_fonts = 0
