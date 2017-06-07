@@ -11,6 +11,7 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'fatih/vim-go'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'scrooloose/syntastic'
 "
 
 call vundle#end()
@@ -55,6 +56,16 @@ syntax enable
 hi LineNr ctermbg=0 ctermfg=19
 hi CursorLine ctermbg=18
 hi CursorLineNr ctermbg=18 ctermfg=0
+
+" syntastic stuff
+let g:airline#extensions#syntastic#enabled = 1
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_go_checkers = ["go", "gofmt", "golint", "govet"]
 
 " Save w/ sudo
 cmap w!! w !sudo tee > /dev/null %
