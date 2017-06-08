@@ -52,10 +52,15 @@ set tabstop=4
 set shiftwidth=4
 syntax enable
 
+" Enable italics
+set t_ZH=[3m
+set t_ZR=[23m
+
 " Woo colors
 hi LineNr ctermbg=0 ctermfg=19
 hi CursorLine ctermbg=18
 hi CursorLineNr ctermbg=18 ctermfg=0
+hi Comment cterm=italic
 
 " syntastic stuff
 let g:airline#extensions#syntastic#enabled = 1
