@@ -1,20 +1,20 @@
 [base16]
-base00 = #{{base00}}
-base01 = #{{base01}}
-base02 = #{{base02}}
-base03 = #{{base03}}
-base04 = #{{base04}}
-base05 = #{{base05}}
-base06 = #{{base06}}
-base07 = #{{base07}}
-base08 = #{{base08}}
-base09 = #{{base09}}
-base0A = #{{base0A}}
-base0B = #{{base0B}}
-base0C = #{{base0C}}
-base0D = #{{base0D}}
-base0E = #{{base0E}}
-base0F = #{{base0F}}
+base00 = ${xrdb:base00}
+base01 = ${xrdb:base01}
+base02 = ${xrdb:base02}
+base03 = ${xrdb:base03}
+base04 = ${xrdb:base04}
+base05 = ${xrdb:base05}
+base06 = ${xrdb:base06}
+base07 = ${xrdb:base07}
+base08 = ${xrdb:base08}
+base09 = ${xrdb:base09}
+base0A = ${xrdb:base0A}
+base0B = ${xrdb:base0B}
+base0C = ${xrdb:base0C}
+base0D = ${xrdb:base0D}
+base0E = ${xrdb:base0E}
+base0F = ${xrdb:base0F}
 
 [colors]
 background = #00000000

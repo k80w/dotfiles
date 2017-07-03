@@ -4,34 +4,13 @@ Hey look it's all the config stuff for my computer! This is mostly here just so 
 
 # Installing
 
-## Dependencies
-
-To build and install the files, you'll need the following
-
-- [Mustache](https://github.com/mustache/mustache) (Only tested on the ruby implementation, I don't expect it to fully work on any others)
-
-## Find a theme
-
-My dotfiles are based around base16 styling. You'll need to pick a base16 theme and [grap a yml file for it](https://github.com/base16-builder/base16-builder/tree/master/db/schemes). Download one and save it into the root directory of the dotfile repo, next to build.sh.
-
-## Render the templates
-
-To render the templates, run build.sh in a terminal and pass the theme you downloaded earlier as an argument. i.e. if you downloaded `atelier-cave.yml` you would run
+This repository is set up to be used to [GNU Stow](https://www.gnu.org/software/stow/). You can install packages like so:
 
 ```
-./build.sh atelier-cave.yml
+stow [PACKAGE NAME]
 ```
 
-This will copy and render files from `templates` into `packages`.
+E.g. `stow i3` would install the i3 package.
 
-## Let there be dotfiles!
+You can also install every package at once with `stow *`.
 
-Now all the files you need are located in `packages`! You can manually copy them if you want, but it's much easier to use [GNU Stow](https://www.gnu.org/software/stow) to manage them. If you have Stow, all you need to do to install a package is run the following command
-
-```
-stow -d packages -t ~ [package name]
-```
-
-`-d packages` tells stow to grab the package from `packages/` and `-t ~` tells stow to put them in your home directory.
-
-Note that if you rebuild the templates, you don't need to run Stow again.
