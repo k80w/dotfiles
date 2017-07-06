@@ -1,64 +1,64 @@
-#define base00 #000000
-#define base01 #303030
-#define base02 #505050
-#define base03 #b0b0b0
-#define base04 #d0d0d0
-#define base05 #e0e0e0
-#define base06 #f5f5f5
-#define base07 #ffffff
-#define base08 #fb0120
-#define base09 #fc6d24
-#define base0A #fda331
-#define base0B #a1c659
-#define base0C #76c7b7
-#define base0D #6fb3d2
-#define base0E #d381c3
-#define base0F #be643c
+#define _base00 #161b1d
+#define _base01 #1f292e
+#define _base02 #516d7b
+#define _base03 #5a7b8c
+#define _base04 #7195a8
+#define _base05 #7ea2b4
+#define _base06 #c1e4f6
+#define _base07 #ebf8ff
+#define _base08 #d22d72
+#define _base09 #935c25
+#define _base0A #8a8a0f
+#define _base0B #568c3b
+#define _base0C #2d8f6f
+#define _base0D #257fad
+#define _base0E #6b6bb8
+#define _base0F #b72dd2
 
-*base00: base00
-*base01: base01
-*base02: base02
-*base03: base03
-*base04: base04
-*base05: base05
-*base06: base06
-*base07: base07
-*base08: base08
-*base09: base09
-*base0A: base0A
-*base0B: base0B
-*base0C: base0C
-*base0D: base0D
-*base0E: base0E
-*base0F: base0F
+*base00: _base00
+*base01: _base01
+*base02: _base02
+*base03: _base03
+*base04: _base04
+*base05: _base05
+*base06: _base06
+*base07: _base07
+*base08: _base08
+*base09: _base09
+*base0A: _base0A
+*base0B: _base0B
+*base0C: _base0C
+*base0D: _base0D
+*base0E: _base0E
+*base0F: _base0F
 
-*.foreground:	base05
-*.background:	base00
-*.cursorColor:	base05
+*.foreground:	_base05
+*.background:	_base00
+*.cursorColor:	_base05
 
-*.color0:       base00
-*.color1:       base08
-*.color2:       base0B
-*.color3:       base0A
-*.color4:       base0D
-*.color5:       base0E
-*.color6:       base0C
-*.color7:       base05
+*.color0:       _base00
+*.color1:       _base08
+*.color2:       _base0B
+*.color3:       _base0A
+*.color4:       _base0D
+*.color5:       _base0E
+*.color6:       _base0C
+*.color7:       _base05
 
-*.color8:       base03
-*.color9:       base08
-*.color10:      base0B
-*.color11:      base0A
-*.color12:      base0D
-*.color13:      base0E
-*.color14:      base0C
-*.color15:      base07
+*.color8:       _base03
+*.color9:       _base08
+*.color10:      _base0B
+*.color11:      _base0A
+*.color12:      _base0D
+*.color13:      _base0E
+*.color14:      _base0C
+*.color15:      _base07
 
 ! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
 ! use 'shell' template to set these if necessary
-*.color16:      base09
-*.color17:      base0F
-*.color18:      base01
-*.color19:      base02
-*.color20:      base04
-*.color21:      base06
+*.color16:      _base09
+*.color17:      _base0F
+*.color18:      _base01
+*.color19:      _base02
+*.color20:      _base04
+*.color21:      _base06
