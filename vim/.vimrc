@@ -32,7 +32,6 @@ set t_ZR=[23m
 
 " Woo colors
 hi LineNr ctermbg=0 ctermfg=19
-hi CursorLine ctermbg=18
 hi CursorLineNr ctermbg=18 ctermfg=15
 hi Comment cterm=italic
 
