@@ -38,7 +38,7 @@ bindsym $mod+Shift+s sticky toggle
 bindsym $mod+c move position center
 
 # screenshot
-bindsym $mod+Print exec --no-startup-id maim -s -u | xclip -selection clipboard -t image/png
+bindsym $mod+Print exec --no-startup-id "maim -s -u | xclip -selection clipboard -t image/png; notify-send 'Copied screenshot to clipboard'"
 
 # start a terminal
 bindsym $mod+Return exec urxvt
