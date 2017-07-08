@@ -3,6 +3,6 @@ URxvt*scrollBar: false
 URxvt*secondaryScreen: 1
 URxvt*secondaryScroll: 0
 
-! Braille dots (⣾) don't appear correctly in Operator Mono unless I increase the letter spacing
+! Braille dots (⣾) dont appear correctly in Operator Mono unless I increase the letter spacing
 ! makes sense right
 URxvt*letterSpace: 1
