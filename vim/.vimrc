@@ -8,9 +8,11 @@ Plugin 'VundleVim/Vundle.vim'
 
 " PLUGINS
 Plugin 'chriskempson/base16-vim'
+Plugin 'uarun/protobuf-vim'
 Plugin 'fatih/vim-go'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 Plugin 'ledger/vim-ledger'
+Plugin 'pangloss/vim-javascript'
 "
 
 call vundle#end()
@@ -34,6 +36,9 @@ set t_ZR=[23m
 hi LineNr ctermbg=0 ctermfg=19
 hi CursorLineNr ctermbg=18 ctermfg=15
 hi Comment cterm=italic
+
+" JSDoc
+let g:javascript_plugin_jsdoc = 1
 
 " syntastic stuff
 let g:syntastic_always_populate_loc_list = 1
