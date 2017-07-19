@@ -51,6 +51,8 @@
     # Ignore newlines '\n' in notifications.
     ignore_newline = no
     
+
+	max_icon_size = 48
     
     # The geometry of the window:
     #   [{width}]x{height}[+/-{x}+/-{y}]
@@ -101,7 +103,7 @@
     sticky_history = yes
     
     # Maximum amount of notifications kept in history
-    history_length = 20
+    history_length = 100
     
     # Display indicators for URLs (U) and actions (A).
     show_indicators = yes
@@ -114,7 +116,7 @@
     # Draw a line of "separatpr_height" pixel height between two
     # notifications.
     # Set to 0 to disable.
-    separator_height = 2
+    separator_height = 1
     
     # Padding between text and separator.
     padding = 16
@@ -139,7 +141,7 @@
     dmenu = /usr/bin/dmenu -p dunst:
     
     # Browser for opening urls in context menu.
-    browser = /usr/bin/firefox -new-tab
+    browser = /usr/bin/chromium -new-tab
 
     # Align icons left/right/off
     icon_position = left
