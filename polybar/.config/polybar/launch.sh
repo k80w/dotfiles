@@ -4,6 +4,6 @@ while pgrep -x polybar >/dev/null; do sleep 1; done
 
 polybar primary &
 polybar secondary &
-
+polybar tertiary &
 
 echo "Bar launched..."
