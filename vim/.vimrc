@@ -8,7 +8,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " PLUGINS
 Plugin 'chriskempson/base16-vim'
-Plugin 'uarun/protobuf-vim'
+Plugin 'uarun/vim-protobuf'
 Plugin 'fatih/vim-go'
 "Plugin 'scrooloose/syntastic'
 Plugin 'ledger/vim-ledger'
