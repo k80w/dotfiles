@@ -36,6 +36,7 @@ set t_ZR=[23m
 hi LineNr ctermbg=0 ctermfg=19
 hi CursorLineNr ctermbg=18 ctermfg=15
 hi Comment cterm=italic
+hi StatusLine ctermbg=18 ctermfg=20
 
 " JSDoc
 let g:javascript_plugin_jsdoc = 1
