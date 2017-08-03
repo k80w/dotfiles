@@ -2,7 +2,7 @@ URxvt*font: xft:operatormonobook-10
 URxvt*scrollBar: false
 URxvt*secondaryScreen: 1
 URxvt*secondaryScroll: 0
+URxvt*cursorBlink: true
 
 ! Braille dots (⣾) dont appear correctly in Operator Mono unless I increase the letter spacing
-! makes sense right
 URxvt*letterSpace: 1
