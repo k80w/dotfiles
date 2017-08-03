@@ -35,8 +35,17 @@ set t_ZR=[23m
 " Woo colors
 hi LineNr ctermbg=0 ctermfg=19
 hi CursorLineNr ctermbg=18 ctermfg=15
-hi Comment cterm=italic
 hi StatusLine ctermbg=18 ctermfg=20
+
+hi Comment cterm=italic ctermfg=8
+hi Search ctermfg=0 ctermbg=11
+hi WildMenu ctermfg=0 ctermbg=11
+
+" Cursor
+" n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20
+set guicursor=n-v-c-sm:block
+set guicursor+=i-ci-ve:ver25-blinkon10
+set guicursor+=r-cr-o:hor20-blinkon10
 
 " JSDoc
 let g:javascript_plugin_jsdoc = 1

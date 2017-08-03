@@ -93,6 +93,7 @@ fi
 source $ZSH/oh-my-zsh.sh
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
+export EDITOR=/bin/nvim
 export NPM_PACKAGES="${HOME}/.npm-packages"
 export GOPATH=/home/dnaf/go
 export PATH=$PATH:$NPM_PACKAGES/bin:${GOPATH//://bin:}/bin
