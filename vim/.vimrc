@@ -13,6 +13,7 @@ Plugin 'fatih/vim-go'
 "Plugin 'scrooloose/syntastic'
 Plugin 'ledger/vim-ledger'
 Plugin 'pangloss/vim-javascript'
+Plugin 'vim-scripts/nginx.vim'
 "
 
 call vundle#end()
