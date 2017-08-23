@@ -34,8 +34,10 @@ set t_ZH=[3m
 set t_ZR=[23m
 
 " Woo colors
-hi LineNr ctermbg=0 ctermfg=19
+hi Normal ctermbg=none
+hi LineNr ctermbg=none ctermfg=19
 hi CursorLineNr ctermbg=18 ctermfg=15
+hi CursorLine ctermbg=18
 hi StatusLine ctermbg=18 ctermfg=20
 
 hi Comment cterm=italic ctermfg=8
@@ -47,6 +49,18 @@ hi WildMenu ctermfg=0 ctermbg=11
 set guicursor=n-v-c-sm:block
 set guicursor+=i-ci-ve:ver25-blinkon10
 set guicursor+=r-cr-o:hor20-blinkon10
+
+" Markdown highlighting
+hi markdownItalic cterm=italic
+hi markdownBold cterm=bold
+
+hi markdownHeadingDelimiter cterm=bold ctermfg=blue
+hi link markdownH1 markdownHeadingDelimiter
+hi link markdownH2 markdownH1
+hi link markdownH3 markdownH2
+hi link markdownH4 markdownH3
+hi link markdownH5 markdownH4
+hi link markdownH6 markdownH5
 
 " JSDoc
 let g:javascript_plugin_jsdoc = 1
