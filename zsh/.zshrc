@@ -93,6 +93,9 @@ fi
 source $ZSH/oh-my-zsh.sh
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
+# Dircolors
+eval $(dircolors -b $HOME/.dircolors)
+
 export EDITOR=/bin/nvim
 export NPM_PACKAGES="${HOME}/.npm-packages"
 export GOPATH=/home/dnaf/go
