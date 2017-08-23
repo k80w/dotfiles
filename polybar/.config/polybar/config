@@ -68,7 +68,7 @@ modules-right = ping pkg eth volume date time powermenu
 [bar/secondary]
 inherit = section/base
 
-monitor = ${env:MONITOR:DVI-0}
+monitor = ${env:MONITOR:HDMI-0}
 modules-left = i3 xwindow
 modules-center = filesystem
 modules-right = cpu memory
@@ -76,7 +76,7 @@ modules-right = cpu memory
 [bar/tertiary]
 inherit = section/base
 
-monitor = ${env:MONITOR:HDMI-0}
+monitor = ${env:MONITOR:DVI-0}
 modules-left = i3 xwindow
 modules-center =
 modules-right =
