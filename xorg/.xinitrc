@@ -12,6 +12,6 @@ export QT_QPA_PLATFORMTHEME=gtk2
 
 xrdb -merge ~/.Xresources
 
-xrandr --output DVI-0 --rotate left --right-of DVI-1 --output DVI-1 --right-of HDMI-0
+xrandr --output DVI-0 --right-of DVI-1 --rotate right --output DVI-1 --right-of HDMI-0 --primary
 
 exec i3
