@@ -269,11 +269,11 @@ mpd_crossfade_time = 5
 #
 #playlist_show_mpd_host = no
 #
-#playlist_show_remaining_time = no
+playlist_show_remaining_time = yes
 #
 #playlist_shorten_total_times = no
 #
-#playlist_separate_albums = no
+playlist_separate_albums = yes
 #
 ##
 ## Note: Possible display modes: classic, columns.
@@ -296,7 +296,7 @@ mpd_crossfade_time = 5
 #
 #autocenter_mode = no
 #
-#centered_cursor = no
+centered_cursor = yes
 #
 ##
 ## Note: You can specify third character which will
