@@ -17,7 +17,7 @@ base0E = ${xrdb:base0E}
 base0F = ${xrdb:base0F}
 
 [colors]
-background = #00000000
+background = ${base16.base00}
 background-alt = ${base16.base07}
 foreground = ${base16.base07}
 foreground-alt = ${base16.base03}
@@ -49,9 +49,9 @@ wm-restack = i3
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
-font-0 = Noto Sans:pixelsize=13
-font-1 = Noto Sans Symbols:pixelsize=13
-font-2 = Noto Sans CJK JP:pixelsize=13
+font-0 = Misc Fixed:pixelsize=13:file=/usr/share/fonts/misc/8x13.pcf.gz
+font-1 = Misc Fixed:pixelsize=13:file=/usr/share/fonts/misc/12x13ja.pcf.gz
+font-2 = Wuncon Siji:pixelsize=13;1
 
 [global/wm]
 margin-top = 5
@@ -63,7 +63,7 @@ inherit = section/base
 monitor = ${env:MONITOR:DVI-1}
 modules-left = i3 xwindow
 modules-center = mpd
-modules-right = ping pkg eth volume date time powermenu
+modules-right = ping pkg eth date time
 
 [bar/secondary]
 inherit = section/base
@@ -192,8 +192,9 @@ interval = 5
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
+format-foreground = ${colors.foreground}
 format-underline = #0a6cf5
 
 label = %time%
@@ -205,8 +206,9 @@ interval = 5
 date = %Y-%m-%d
 date-alt = %Y-%m-%d
 
-format-prefix = 
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
+format-foreground = ${colors.foreground}
 format-underline = #0a6cf5
 
 label = %date%
@@ -262,6 +264,9 @@ menu-2-1-exec = menu-open-0
 [module/ping]
 type = custom/script
 
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+
 format-foreground = ${colors.foreground}
 exec = ping 8.8.4.4 -n -c 1 | grep -oP "(?<=time=)[0-9\.]* ms"
 interval = 1
@@ -272,5 +277,8 @@ interval = 600
 exec = .config/polybar/pkg.sh
 exec-if = "ping -q -w 2 -c 1 8.8.4.4 > /dev/null"
 format-foreground = ${colors.foreground}
+
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
 
 ; vim:ft=dosini

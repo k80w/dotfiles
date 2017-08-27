@@ -1,5 +1,5 @@
 ! URxvt*font: xft:operatormonobook-10
-URxvt*font: 8x13
+URxvt*font: 8x13,xft:Misc Fixed:pixelsize=13:file=/usr/share/fonts/misc/12x13ja.pcf.gz
 URxvt*scrollBar: false
 URxvt*secondaryScreen: 1
 URxvt*secondaryScroll: 0
