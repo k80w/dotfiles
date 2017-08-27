@@ -302,9 +302,11 @@ centered_cursor = yes
 ## Note: You can specify third character which will
 ## be used to build 'empty' part of progressbar.
 ##
-#progressbar_look = =>
+#progressbar_look = █▓░
+progressbar_look = ▓▒░
+#progressbar_look = █ ░
 #
-#progressbar_boldness = yes
+progressbar_boldness = no
 #
 ## Available values: database, playlist.
 ##
@@ -486,17 +488,17 @@ clock_display_seconds = yes
 #
 #state_flags_color = default
 #
-main_window_color = cyan
+main_window_color = magenta
 #
 #color1 = white
 #
 #color2 = green
 #
-#main_window_highlight_color = yellow
+main_window_highlight_color = red
 #
-#progressbar_color = black
+progressbar_color = red
 #
-#progressbar_elapsed_color = green
+progressbar_elapsed_color = red
 #
 #statusbar_color = default
 #
