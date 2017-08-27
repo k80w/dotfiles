@@ -478,7 +478,7 @@ clock_display_seconds = yes
 #
 #colors_enabled = yes
 #
-#empty_tag_color = cyan
+empty_tag_color = magenta
 #
 #header_window_color = default
 #
@@ -488,11 +488,11 @@ clock_display_seconds = yes
 #
 #state_flags_color = default
 #
-main_window_color = magenta
+main_window_color = red
 #
-#color1 = white
+color1 = magenta
 #
-#color2 = green
+color2 = yellow
 #
 main_window_highlight_color = red
 #
@@ -500,7 +500,7 @@ progressbar_color = red
 #
 progressbar_elapsed_color = red
 #
-#statusbar_color = default
+statusbar_color = red
 #
 #alternative_ui_separator_color = black
 #
