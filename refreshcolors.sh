@@ -30,22 +30,22 @@ setcolor() {
 	send "\033]4;$1;$2\007"
 }
 
-setcolor  0 $(getbase 00)
-setcolor  1 $(getbase 08)
-setcolor  2 $(getbase 0B)
-setcolor  3 $(getbase 0A)
-setcolor  4 $(getbase 0D)
-setcolor  5 $(getbase 0E)
-setcolor  6 $(getbase 0C)
-setcolor  7 $(getbase 05)
-setcolor  8 $(getbase 03)
-setcolor  9 $(getbase 08)
-setcolor 10 $(getbase 0B)
-setcolor 11 $(getbase 0A)
-setcolor 12 $(getbase 0D)
-setcolor 13 $(getbase 0E)
-setcolor 14 $(getbase 0C)
-setcolor 15 $(getbase 07)
+setcolor    0 $(getbase 00)
+setcolor    1 $(getbase 08)
+setcolor    2 $(getbase 0B)
+setcolor    3 $(getbase 0A)
+setcolor    4 $(getbase 0D)
+setcolor    5 $(getbase 0E)
+setcolor    6 $(getbase 0C)
+setcolor    7 $(getbase 05)
+setcolor    8 $(getbase 03)
+setcolor    9 $(getbase 08)
+setcolor   10 $(getbase 0B)
+setcolor   11 $(getbase 0A)
+setcolor   12 $(getbase 0D)
+setcolor   13 $(getbase 0E)
+setcolor   14 $(getbase 0C)
+setcolor   15 $(getbase 07)
 
 setspecial 10 $(getbase 05) # foreground
 setspecial 11 $(getbase 00) # background
