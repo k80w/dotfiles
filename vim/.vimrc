@@ -40,7 +40,7 @@ hi CursorLineNr ctermbg=18 ctermfg=15
 hi CursorLine ctermbg=18
 hi StatusLine ctermbg=18 ctermfg=20
 
-hi Comment cterm=italic ctermfg=8
+" hi Comment cterm=italic ctermfg=8
 hi Search ctermfg=0 ctermbg=11
 hi WildMenu ctermfg=0 ctermbg=11
 

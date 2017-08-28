@@ -257,7 +257,7 @@ mpd_crossfade_time = 5
 ##   not available.
 ##
 #
-#song_columns_list_format = (20)[]{a} (6f)[green]{NE} (50)[white]{t|f:Title} (20)[cyan]{b} (7f)[magenta]{l}
+song_columns_list_format = (20)[]{a} (6f)[white]{NE} (50)[magenta]{t|f:Title} (20)[red]{b} (7f)[magenta]{l}
 #
 ##### various settings #####
 #

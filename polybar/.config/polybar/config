@@ -21,7 +21,7 @@ background = ${base16.base00}
 background-alt = ${base16.base07}
 foreground = ${base16.base07}
 foreground-alt = ${base16.base03}
-primary = ${base16.base0C}
+primary = ${base16.base08}
 secondary = ${base16.base0B}
 alert = ${base16.base0A}
 
@@ -143,13 +143,13 @@ label-song-maxlen = 64
 label-song-ellipsis = true
 
 bar-progress-width = 20
-bar-progress-indicator = >
+bar-progress-indicator = ▒
 bar-progress-indicator-font = 1
 bar-progress-indicator-foreground = ${colors.primary}
-bar-progress-fill = ─
+bar-progress-fill = ▓
 bar-progress-fill-font = 1
 bar-progress-fill-foreground = ${colors.primary}
-bar-progress-empty = ─
+bar-progress-empty = ░
 bar-progress-empty-font = 1
 bar-progress-empty-foreground = ${colors.foreground-alt}
 
