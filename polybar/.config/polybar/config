@@ -189,7 +189,7 @@ label-disconnected-foreground = ${colors.foreground-alt}
 type = internal/date
 interval = 5
 
-time = %H:%M
+time = %I:%M %p
 time-alt = %H:%M:%S
 
 format-prefix = " "

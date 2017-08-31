@@ -269,7 +269,7 @@ song_columns_list_format = (20)[]{a} (6f)[white]{NE} (50)[magenta]{t|f:Title} (2
 #
 #playlist_show_mpd_host = no
 #
-playlist_show_remaining_time = yes
+playlist_show_remaining_time = no
 #
 #playlist_shorten_total_times = no
 #
