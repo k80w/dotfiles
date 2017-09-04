@@ -15,8 +15,6 @@ PROMPT+='%F{7}%~' # ~/current/working/directory
 PROMPT+='$(git_prompt_info) ' # git stuff
 PROMPT+='%(?.%F{green}.%F{red})$ %f' # dollar sign is red if error, otherwise green
 
-RPS1='${return_code}'
-
 # git settings
 ZSH_THEME_GIT_PROMPT_PREFIX="%F{13}("
 ZSH_THEME_GIT_PROMPT_CLEAN=""
