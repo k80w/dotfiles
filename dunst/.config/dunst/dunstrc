@@ -1,5 +1,5 @@
 [global]
-    font = Yantramanav 14
+    font = Misc Fixed 13
     
     # Allow a small subset of html markup:
     #   <b>bold</b>
@@ -146,7 +146,7 @@
     icon_position = left
 
     # Paths to default icons.
-    icon_folders = /usr/share/icons/Paper/16x16/status/:/usr/share/icons/Paper/16x16/devices/
+    icon_folders = /usr/share/icons/breeze/status/16/:/usr/share/icons/breeze/devices/16/
 
 [frame]
     width = 0
