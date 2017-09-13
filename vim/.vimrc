@@ -7,14 +7,17 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " PLUGINS
-Plugin 'chriskempson/base16-vim'
-Plugin 'uarun/vim-protobuf'
-Plugin 'fatih/vim-go'
-"Plugin 'scrooloose/syntastic'
-Plugin 'ledger/vim-ledger'
-Plugin 'pangloss/vim-javascript'
-Plugin 'rust-lang/rust.vim'
-Plugin 'vim-scripts/nginx.vim'
+	Plugin 'chriskempson/base16-vim'
+	Plugin 'scrooloose/nerdtree'
+
+	" Languages/syntax
+	Plugin 'uarun/vim-protobuf'
+	Plugin 'fatih/vim-go'
+	Plugin 'ledger/vim-ledger'
+	Plugin 'pangloss/vim-javascript'
+	Plugin 'rust-lang/rust.vim'
+	Plugin 'vim-scripts/nginx.vim'
+	Plugin 'alunny/pegjs-vim'
 "
 
 call vundle#end()
@@ -50,6 +53,11 @@ hi WildMenu ctermfg=0 ctermbg=11
 set guicursor=n-v-c-sm:block
 set guicursor+=i-ci-ve:ver25-blinkon10
 set guicursor+=r-cr-o:hor20-blinkon10
+
+" Indent guides
+set listchars=tab:\│\ ,trail:-
+set list
+hi NonText ctermfg=18
 
 " Markdown highlighting
 hi markdownItalic cterm=italic

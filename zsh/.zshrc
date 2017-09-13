@@ -51,7 +51,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux archlinux themes colorize colored-man-pages compleat npm)
+plugins=(git tmux archlinux themes colorize colored-man-pages compleat npm systemd)
 
 
 # User configuration
