@@ -100,3 +100,4 @@ export EDITOR=/bin/nvim
 export NPM_PACKAGES="${HOME}/.npm-packages"
 export GOPATH=/home/dnaf/go
 export PATH=$PATH:$NPM_PACKAGES/bin:${GOPATH//://bin:}/bin
+alias qr='qrencode -t utf8 -o -'
