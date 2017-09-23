@@ -49,8 +49,15 @@ setcolor   12 $(getbase 0D)
 setcolor   13 $(getbase 0E)
 setcolor   14 $(getbase 0C)
 setcolor   15 $(getbase 07)
+setcolor   16 $(getbase 09)
+setcolor   17 $(getbase 0F)
+setcolor   18 $(getbase 01)
+setcolor   19 $(getbase 02)
+setcolor   20 $(getbase 04)
+setcolor   21 $(getbase 06)
 
 setspecial 10 $(getbase 05) # foreground
 setspecial 11 $(getbase 00) # background
 setspecial 12 $(getbase 05) # cursor
 setspecial 13 $(getbase 05) # mouse
+setspecial 708 $(getbase 00) # border
