@@ -99,4 +99,4 @@ eval $(dircolors -b $HOME/.dircolors)
 export EDITOR=/bin/nvim
 export NPM_PACKAGES="${HOME}/.npm-packages"
 export GOPATH=/home/dnaf/go
-export PATH=$PATH:$NPM_PACKAGES/bin:${GOPATH//://bin:}/bin
+export PATH=$PATH:$NPM_PACKAGES/bin:${GOPATH//://bin:}/bin:/home/dnaf/.gem/ruby/2.4.0/bin

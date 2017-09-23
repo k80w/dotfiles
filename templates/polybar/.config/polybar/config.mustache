@@ -57,29 +57,46 @@ font-2 = Wuncon Siji:pixelsize=13;1
 margin-top = 5
 margin-bottom = 5
 
+{{#bars.primary}}
 [bar/primary]
 inherit = section/base
 
-monitor = ${env:MONITOR:DVI-1}
+monitor = ${env:MONITOR:{{bars.primary.monitor}}}
 modules-left = i3 xwindow
 modules-center = mpd
 modules-right = network ping pkg eth date time
+{{/bars.primary}}
 
+{{#bars.secondary}}
 [bar/secondary]
 inherit = section/base
 
-monitor = ${env:MONITOR:HDMI-0}
+monitor = ${env:MONITOR:{{bars.secondary.monitor}}}
 modules-left = i3 xwindow
 modules-center = filesystem
 modules-right = cpu memory
+{{/bars.secondary}}
 
+{{#bars.tertiary}}
 [bar/tertiary]
 inherit = section/base
 
-monitor = ${env:MONITOR:DVI-0}
+monitor = ${env:MONITOR:{{bars.tertiary.monitor}}}
 modules-left = i3 xwindow
 modules-center =
 modules-right =
+{{/bars.tertiary}}
+
+{{#bars.laptop}}
+[bar/laptop]
+inherit = section/base
+
+padding-right = 2
+
+monitor = ${env:MONITOR:{{bars.laptop.monitor}}}
+modules-left = i3 xwindow
+modules-right = battery network ping pkg date time
+{{/bars.laptop}}
 
 ; ------------------------------------------- MODULES -----------------------------------------------
 
@@ -256,6 +273,14 @@ format-prefix-foreground = ${colors.foreground-alt}
 format-foreground = ${colors.foreground}
 exec = ping 8.8.4.4 -n -c 1 | grep -oP "(?<=time=)[0-9\.]* ms"
 interval = 1
+
+[module/battery]
+type = internal/battery
+
+battery = BAT0
+adapter = AC
+
+poll-interval = 5
 
 [module/network]
 type = internal/network

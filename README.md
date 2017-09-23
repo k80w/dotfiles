@@ -2,15 +2,23 @@
 
 Hey look it's all the config stuff for my computer! This is mostly here just so I can easily set things up when I need to, but maybe someone else is interested in looking at it too. In that case, howdy stranger! Sorry about the mess...
 
-# Installing
+# Building
 
-This repository is set up to be used to [GNU Stow](https://www.gnu.org/software/stow/). You can install packages like so:
+Copy the example settings file
 
+```bash
+cp settings.yml.example settings.yml
 ```
-stow [PACKAGE NAME]
+
+Tweak the settings as you see fit, then run
+
+```bash
+./build.sh
 ```
 
-E.g. `stow i3` would install the i3 package.
+Now you can use Stow to install the packages you want
 
-You can also install every package at once with `stow *`.
-
+```bash
+cd packages
+stow -t ~ xorg urxvt i3 zsh polybar # It's very important that you use -t ~ to make sure they install to your home directory
+```
