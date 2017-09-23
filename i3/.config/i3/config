@@ -31,9 +31,6 @@ font 8x13
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# sticky
-bindsym $mod+Shift+s sticky toggle
-
 # center
 bindsym $mod+c move position center
 
@@ -182,6 +179,9 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id ponymix increase 5
 bindsym XF86AudioLowerVolume exec --no-startup-id ponymix decrease 5 
 #
 bindsym $mod+Shift+a move workspace to output left
+bindsym $mod+Shift+w move workspace to output up
+bindsym $mod+Shift+d move workspace to output right
+bindsym $mod+Shift+s move workspace to output down
 #
 assign [class="discord"] 4
 assign [class="Steam"] 8

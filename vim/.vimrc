@@ -9,6 +9,7 @@ Plugin 'VundleVim/Vundle.vim'
 " PLUGINS
 	Plugin 'chriskempson/base16-vim'
 	Plugin 'scrooloose/nerdtree'
+	Plugin 'Chiel92/vim-autoformat'
 
 	" Languages/syntax
 	Plugin 'uarun/vim-protobuf'
@@ -70,6 +71,9 @@ hi link markdownH3 markdownH2
 hi link markdownH4 markdownH3
 hi link markdownH5 markdownH4
 hi link markdownH6 markdownH5
+
+" use xo for autoformat
+let g:formatters_javascript = ['xo_javascript']
 
 " JSDoc
 let g:javascript_plugin_jsdoc = 1
