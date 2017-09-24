@@ -56,7 +56,12 @@ glx-swap-method = "undefined";
 #################################
 
 # Enabled client-side shadows on windows.
+{{#flat}}
+shadow = false;
+{{/flat}}
+{{^flat}}
 shadow = true;
+{{/flat}}
 # Don't draw shadows on DND windows.
 no-dnd-shadow = true;
 # Avoid drawing shadows on dock/panel windows.

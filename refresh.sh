@@ -30,9 +30,17 @@ setcolor() {
 	send "\033]4;$1;$2\007"
 }
 
+echo "Merging .Xresources"
 xrdb -merge ~/.Xresources
-i3-msg restart
 
+echo "Restarting i3"
+i3-msg restart &
+
+echo "Restarting compton"
+killall compton
+compton > /dev/null &
+
+echo "Setting terminal colors"
 setcolor    0 $(getbase 00)
 setcolor    1 $(getbase 08)
 setcolor    2 $(getbase 0B)

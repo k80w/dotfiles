@@ -2,7 +2,7 @@
 
 view=settings.yml
 
-for file in $(find templates -mindepth 1 -type f); do
+for file in $(find templates -mindepth 1 -type f -o -type l); do
 	# Get basename
 	base="$(basename $file)"
 
@@ -19,8 +19,7 @@ for file in $(find templates -mindepth 1 -type f); do
 	mkdir -p $target
 
 	# Check to see if it's a .mustache file
-	if [ "${file##*.}" == "mustache" ]
-	then
+	if [ "${file##*.}" == "mustache" ]; then
 		echo "render $rel"
 		dest=${dest%%.mustache}
 		mustache $view $file > $dest
