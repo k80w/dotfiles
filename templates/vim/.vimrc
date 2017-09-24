@@ -10,6 +10,7 @@ Plugin 'VundleVim/Vundle.vim'
 	Plugin 'chriskempson/base16-vim'
 	Plugin 'scrooloose/nerdtree'
 	Plugin 'Chiel92/vim-autoformat'
+	Plugin 'junegunn/goyo.vim'
 
 	" Languages/syntax
 	Plugin 'uarun/vim-protobuf'
