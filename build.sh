@@ -2,6 +2,9 @@
 
 view=settings.yml
 
+templates=0
+files=0
+
 for file in $(find templates -mindepth 1 -type f -o -type l); do
 	# Get basename
 	base="$(basename $file)"
@@ -23,8 +26,15 @@ for file in $(find templates -mindepth 1 -type f -o -type l); do
 		echo "render $rel"
 		dest=${dest%%.mustache}
 		mustache $view $file > $dest
+		echo $((templates++)) > /dev/null
 	else
 		echo "  copy $rel"
 		cp $file $dest
+		echo $((files++)) > /dev/null
 	fi
 done
+
+echo
+echo $templates templates
+echo $files files
+echo $((templates + files)) total
