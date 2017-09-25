@@ -40,6 +40,10 @@ echo "Restarting compton"
 killall compton
 compton > /dev/null &
 
+echo "Restarting dunst"
+killall dunst
+dunst 2> /dev/null &
+
 echo "Setting terminal colors"
 setcolor    0 $(getbase 00)
 setcolor    1 $(getbase 08)
