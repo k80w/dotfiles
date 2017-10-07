@@ -19,6 +19,9 @@ base0F: "#8B00FF"
 # Gaps between windows in i3
 gaps: 64
 
+# If true, sets background to base00 and disables drop shadows
+flat: false
+
 # Bars
 bars:
     primary:
