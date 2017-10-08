@@ -25,7 +25,7 @@ for file in $(find templates -mindepth 1 -type f -o -type l); do
 	if [ "${file##*.}" == "mustache" ]; then
 		echo "render $rel"
 		dest=${dest%%.mustache}
-		mustache $view $file > $dest
+		cat $view | ./huerotate.js | mustache - $file > $dest
 		echo $((templates++)) > /dev/null
 	else
 		echo "  copy $rel"
