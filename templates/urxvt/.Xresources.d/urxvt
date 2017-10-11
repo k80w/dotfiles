@@ -1,5 +1,5 @@
-URxvt*font: xft:mplus fxd:pixelsize=13
-URxvt*italicFont: xft:mplus fxd:pixelsize=13
+URxvt*font: 8x13,xft:Misc Fixed:pixelsize=13:file=/usr/share/fonts/misc/12x13ja.pcf.gz
+URxvt*italicFont: xft:Misc Fixed:pixelsize=13:file=/usr/share/fonts/misc/8x13O.pcf.gz
 URxvt*scrollBar: false
 URxvt*secondaryScreen: 1
 URxvt*secondaryScroll: 0
