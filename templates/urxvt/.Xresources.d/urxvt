@@ -1,4 +1,3 @@
-! URxvt*font: xft:operatormonobook-10
 URxvt*font: xft:mplus fxd:pixelsize=13
 URxvt*italicFont: xft:mplus fxd:pixelsize=13
 URxvt*scrollBar: false
