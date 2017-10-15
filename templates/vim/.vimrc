@@ -36,6 +36,9 @@ set shiftwidth=4
 set linebreak
 syntax enable
 
+" Relative numbers
+set number relativenumber
+
 " Enable italics
 set t_ZH=[3m
 set t_ZR=[23m
