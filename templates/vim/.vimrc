@@ -14,8 +14,10 @@ Plugin 'VundleVim/Vundle.vim'
 
 	" Languages/syntax
 	Plugin 'uarun/vim-protobuf'
+	Plugin 'tikhomirov/vim-glsl'
 	Plugin 'fatih/vim-go'
 	Plugin 'ledger/vim-ledger'
+	Plugin 'elixir-lang/vim-elixir'
 	Plugin 'pangloss/vim-javascript'
 	Plugin 'rust-lang/rust.vim'
 	Plugin 'vim-scripts/nginx.vim'
