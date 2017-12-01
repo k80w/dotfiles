@@ -51,12 +51,6 @@ bindsym $mod+d exec rofi -show run #dmenu_run
 # installed.
 #bindsym $mod+d exec --no-startup-id rofi -show run #i3-dmenu-desktop
 
-# change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
-
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -158,7 +152,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-bindsym $mod+z exec --no-startup-id /home/dnaf/lock
+# Lock
+bindsym $mod+l exec --no-startup-id /home/dnaf/lock
+
+# Passmenu
+bindsym $mod+z exec --no-startup-id rofi-pass
 
 #                       border  back    text    indictr child_border
 client.focused          $base05 $base05	$base00	$base05	$base05

@@ -11,6 +11,7 @@ Plugin 'VundleVim/Vundle.vim'
 	Plugin 'scrooloose/nerdtree'
 	Plugin 'Chiel92/vim-autoformat'
 	Plugin 'junegunn/goyo.vim'
+	Plugin 'Shougo/deoplete.nvim'
 
 	" Languages/syntax
 	Plugin 'uarun/vim-protobuf'
@@ -18,6 +19,7 @@ Plugin 'VundleVim/Vundle.vim'
 	Plugin 'fatih/vim-go'
 	Plugin 'ledger/vim-ledger'
 	Plugin 'elixir-lang/vim-elixir'
+	Plugin 'slashmili/alchemist.vim'
 	Plugin 'pangloss/vim-javascript'
 	Plugin 'rust-lang/rust.vim'
 	Plugin 'vim-scripts/nginx.vim'
@@ -92,6 +94,9 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_go_checkers = ["go", "gofmt", "golint", "govet"]
+
+" Ayy
+let g:deoplete#enable_at_startup = 1
 
 " Save w/ sudo
 cmap w!! w !sudo tee > /dev/null %
