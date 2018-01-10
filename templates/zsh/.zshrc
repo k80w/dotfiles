@@ -51,7 +51,8 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux archlinux themes colorize colored-man-pages compleat npm systemd)
+plugins=(git tmux archlinux themes colorize colored-man-pages compleat npm systemd zsh-completions)
+autoload -U compinit && compinit
 
 
 # User configuration
@@ -84,6 +85,8 @@ export PATH=~/.npm-global/bin:$PATH
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias vim="nvim"
 
 ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
