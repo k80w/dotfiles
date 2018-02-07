@@ -18,3 +18,9 @@ def_key "l"
 def_key "l"
   volume_up
 
+def_key "L"
+  show_lyrics
+
+def_key "ctrl-l"
+  toggle_lyrics_fetcher
+
