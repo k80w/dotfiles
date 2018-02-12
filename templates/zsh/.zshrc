@@ -18,6 +18,6 @@ eval $(dircolors -b $HOME/.dircolors)
 export EDITOR=/bin/nvim
 export NPM_PACKAGES="${HOME}/.npm-packages"
 export GOPATH=/home/dnaf
-export PATH=$PATH:$NPM_PACKAGES/bin:${GOPATH//://bin:}/bin:/home/dnaf/.gem/ruby/2.4.0/bin
+export PATH=$PATH:$NPM_PACKAGES/bin:${GOPATH//://bin:}/bin:/home/dnaf/bin
 alias qr='qrencode -t utf8 -o -'
 
