@@ -15,5 +15,6 @@ media_library_primary_tag = album_artist
 
 clock_display_seconds = yes
 
+follow_now_playing_lyrics yes
 
 song_columns_list_format = (3f)[yellow]{NE:#} (50)[red]{t|f:Title} (20)[blue]{b} (7f)[green]{l}
