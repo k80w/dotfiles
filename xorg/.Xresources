@@ -1,0 +1,32 @@
+#include ".Xresources.d/base16"
+
+! URxvt
+*foreground:   _base05
+*background:   _base00
+*cursorColor:  _base05
+
+*color0:       _base00
+*color1:       _base08
+*color2:       _base0B
+*color3:       _base0A
+*color4:       _base0D
+*color5:       _base0E
+*color6:       _base0C
+*color7:       _base05
+
+*color8:       _base03
+*color9:       _base09
+*color10:      _base01
+*color11:      _base02
+*color12:      _base04
+*color13:      _base06
+*color14:      _base0F
+*color15:      _base07
+
+URxvt.cursorBlink  :1
+URxvt.font:        xft:lucy tewi:pixelsize=11
+URxvt.italicFont:  xft:lucy tewi:pixelsize=11
+URxvt.boldFont:  xft:lucy tewi:pixelsize=11:style=bold
+
+URxvt.internalBorder: 33
+URxvt.scrollBar: false

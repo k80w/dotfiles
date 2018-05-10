@@ -1,0 +1,80 @@
+[base16]
+base00 = ${xrdb:base00}
+base01 = ${xrdb:base01}
+base02 = ${xrdb:base02}
+base03 = ${xrdb:base03}
+base04 = ${xrdb:base04}
+base05 = ${xrdb:base05}
+base06 = ${xrdb:base06}
+base07 = ${xrdb:base07}
+base08 = ${xrdb:base08}
+base09 = ${xrdb:base09}
+base0A = ${xrdb:base0A}
+base0B = ${xrdb:base0B}
+base0C = ${xrdb:base0C}
+base0D = ${xrdb:base0D}
+base0E = ${xrdb:base0E}
+base0F = ${xrdb:base0F}
+
+[colors]
+background = ${base16.base00}
+foreground = ${base16.base07}
+primary = ${base16.base0A}
+
+[bar/primary]
+width = 100%
+height = 22
+
+font-0=lucy tewi:pixelsize=11
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+padding-left = 0
+padding-right = 1
+
+module-margin = 2
+modules-left = i3
+modules-right = battery date
+
+[module/battery]
+type = internal/battery
+full-at = 99
+battery = BAT0
+adapter = ADP1
+
+[module/date]
+type = internal/date
+
+label = %date% %time%
+
+date = %a %Y-%m-%d%
+time = %H:%M
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+
+label-mode = %index%
+label-mode-padding = 1
+label-mode-foreground = ${colors.background}
+label-mode-background = ${colors.primary}
+
+label-focused = %index%
+label-focused-padding = ${module/i3.label-mode-padding}
+label-focused-foreground = ${colors.background}
+label-focused-background = ${colors.foreground}
+
+label-unfocused = %index%
+label-unfocused-padding = ${module/i3.label-mode-padding}
+
+label-visible = %index%
+label-visible-padding = ${module/i3.label-mode-padding}
+
+label-urgent = %index%
+label-urgent-padding = ${module/i3.label-mode-padding}
+label-urgent-foreground = ${colors.background}
+label-urgent-background = ${colors.primary}
+
+; vim:ft=dosini

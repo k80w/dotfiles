@@ -1,0 +1,34 @@
+#define _base00 #212121
+#define _base01 #303030
+#define _base02 #353535
+#define _base03 #4A4A4A
+#define _base04 #B2CCD6
+#define _base05 #EEFFFF
+#define _base06 #EEFFFF
+#define _base07 #FFFFFF
+#define _base08 #F07178
+#define _base09 #F78C6C
+#define _base0A #FFCB6B
+#define _base0B #C3E88D
+#define _base0C #89DDFF
+#define _base0D #82AAFF
+#define _base0E #C792EA
+#define _base0F #FF5370
+
+*.base00: _base00
+*.base01: _base01
+*.base02: _base02
+*.base03: _base03
+*.base04: _base04
+*.base05: _base05
+*.base06: _base06
+*.base07: _base07
+*.base08: _base08
+*.base09: _base09
+*.base0A: _base0A
+*.base0B: _base0B
+*.base0C: _base0C
+*.base0D: _base0D
+*.base0E: _base0E
+*.base0F: _base0F
+
