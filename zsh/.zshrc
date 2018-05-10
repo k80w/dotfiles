@@ -33,3 +33,6 @@ zle -N zle-line-init updateCursor
 
 export PROMPT="
 %F{blue}%~%F{white} %# "
+
+alias vim=nvim
+alias ls="ls --color"
