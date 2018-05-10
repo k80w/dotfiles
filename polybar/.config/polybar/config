@@ -35,7 +35,7 @@ padding-right = 1
 
 module-margin = 2
 modules-left = i3
-modules-right = battery date
+modules-right = ping battery date
 
 [module/battery]
 type = internal/battery
@@ -76,5 +76,11 @@ label-urgent = %index%
 label-urgent-padding = ${module/i3.label-mode-padding}
 label-urgent-foreground = ${colors.background}
 label-urgent-background = ${colors.primary}
+
+[module/ping]
+type = custom/script
+
+exec = ping 8.8.4.4 -n -c 1 | grep -oP "(?<=time=)[0-9\.]* ms"
+interval = 1
 
 ; vim:ft=dosini
