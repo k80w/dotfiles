@@ -31,8 +31,58 @@ function updateCursor() {
 zle -N zle-keymap-select updateCursor
 zle -N zle-line-init updateCursor
 
+# Fun quote stuff
+QUOTEFILE=~/quotes.tsv
+function centertext() {
+	printf "%*s\n" $(((${#1}+$2)/2)) "$1"
+}
+function printquote() {
+	text=$(cut -f1 - <<< $1)
+	author=$(cut -f2 - <<< $1)
+	cols=$(tput cols)
+	width=$(($cols<80?$cols:80))
+	echo
+	echo "$text" | fmt -w $width | while read -r line; do
+		centertext "$line" $width
+	done
+	echo "$author" | fmt -w $width | while read -r line; do
+		printf "\033[0;90m"
+		centertext "$line" $width
+	done
+}
+function randomquote() {
+	printquote "$(getrandomquote)"
+}
+function getrandomquote() {
+	shuf -n 1 $QUOTEFILE
+}
+
+
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search
+bindkey "^[[B" down-line-or-beginning-search
+
+
+# Prompt
 export PROMPT="
 %F{blue}%~%F{white} %# "
 
-alias vim=nvim
+# Aliases
+alias vim=/usr/bin/nvim
+alias nvim="echo no"
 alias ls="ls --color"
+
+# Path
+PATH=$PATH:~/bin
+
+GOPATH=~
+
+## Ruby gems
+if which ruby >/dev/null && which gem >/dev/null; then
+	PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+fi
+
+randomquote
