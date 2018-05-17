@@ -1,0 +1,8 @@
+playlist_separate_albums = yes
+
+autocenter_mode = yes
+centered_cursor = yes
+
+media_library_primary_tag = album_artist
+
+follow_now_playing_lyrics = yes
