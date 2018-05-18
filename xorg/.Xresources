@@ -26,7 +26,8 @@
 URxvt.cursorBlink  :1
 URxvt.font:        xft:lucy tewi:pixelsize=11
 URxvt.italicFont:  xft:lucy tewi:pixelsize=11
-URxvt.boldFont:  xft:lucy tewi:pixelsize=11:style=bold
+URxvt.boldFont:    xft:lucy tewi:pixelsize=11:style=bold
+URxvt.intensityStyles: false
 
 URxvt.internalBorder: 33
 URxvt.scrollBar: false
