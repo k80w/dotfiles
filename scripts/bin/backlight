@@ -1,0 +1,5 @@
+#!/bin/bash
+BL=/sys/class/backlight/intel_backlight
+MAX=$(<$BL/max_brightness)
+NEW=$(bc <<< "scale=3; ($1 / 100) * $MAX")
+printf "%.0f" $NEW | sudo tee $BL/brightness

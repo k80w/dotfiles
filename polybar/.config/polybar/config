@@ -21,7 +21,7 @@ background = ${base16.base00}
 foreground = ${base16.base07}
 primary = ${base16.base0A}
 
-[bar/primary]
+[bar/default]
 width = 100%
 height = 22
 
@@ -34,6 +34,19 @@ padding-left = 0
 padding-right = 1
 
 module-margin = 2
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+[bar/primary]
+inherit = bar/default
+monitor = VGA-1
+modules-left = i3
+modules-right = ping battery date
+
+[bar/laptop]
+inherit = bar/default
+monitor = LVDS-1
 modules-left = i3
 modules-right = ping battery date
 
@@ -55,6 +68,8 @@ time = %H:%M
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
+
+pin-workspaces = true
 
 label-mode = %index%
 label-mode-padding = 1

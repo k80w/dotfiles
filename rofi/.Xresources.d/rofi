@@ -1,0 +1,20 @@
+rofi.font: Lucy Tewi 9
+
+rofi.padding: 4
+
+disable-history: true
+
+rofi.width: 256
+
+rofi.hide-scrollbar: true
+
+rofi.scroll-method: 1
+
+rofi.lines: 4
+
+rofi.location: 2
+
+rofi.color-enabled: true
+rofi.color-window: _base01, _base01, _base01
+! State          :      bg,      fg,  bgalt,     hlbg,    hlfg
+rofi.color-normal: _base01, _base05, _base01, _base05, _base01

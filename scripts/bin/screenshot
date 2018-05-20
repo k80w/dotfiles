@@ -1,0 +1,20 @@
+#!/bin/sh
+TMPFILE=$(mktemp /tmp/screenshot.XXXXXXXX.png)
+
+# Create file
+maim -su $TMPFILE && (
+	# Ask user what to do with image
+	OPT=$(rofi -dmenu -lines 2 -p "copy" <<< $'image\nlink')
+	case $OPT in
+		image)
+			xclip -selection clipboard -t image/png -i $TMPFILE
+			dunstify "Image copied to clipboard"
+			;;
+		link)
+			d=$(dunstify -p "Uploading image...")
+			url=$(pb < $TMPFILE) &&
+				xclip -selection clipboard <<< "$url.png" &&
+				dunstify -r $d "Link copied to clipboard!" "$url.png"
+			;;
+	esac
+)

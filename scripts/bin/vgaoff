@@ -1,0 +1,5 @@
+#!/bin/sh
+set -x
+VGA=VGA-1
+xrandr --output $VGA --off
+i3-msg restart

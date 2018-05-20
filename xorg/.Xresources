@@ -1,4 +1,5 @@
 #include ".Xresources.d/base16"
+#include ".Xresources.d/rofi"
 
 ! URxvt
 *foreground:   _base05
