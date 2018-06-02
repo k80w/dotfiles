@@ -76,13 +76,13 @@ alias nvim="echo no"
 alias ls="ls --color"
 
 # Path
-PATH=$PATH:~/bin
+export PATH=$PATH:~/bin
 
-GOPATH=~
+export GOPATH=~
 
 ## Ruby gems
 if which ruby >/dev/null && which gem >/dev/null; then
-	PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+	export PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi
 
 randomquote

@@ -1,8 +1,10 @@
-playlist_separate_albums = yes
-
 autocenter_mode = yes
 centered_cursor = yes
 
 media_library_primary_tag = album_artist
 
 follow_now_playing_lyrics = yes
+
+main_window_color = blue
+
+song_columns_list_format = (20f)[]{ar}(50f)[white]{t|f:Title}
