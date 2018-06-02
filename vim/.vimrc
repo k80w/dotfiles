@@ -9,6 +9,9 @@ call vundle#begin()
 	
 	Plugin 'chriskempson/base16-vim'
 	Plugin 'junegunn/goyo.vim'
+
+	Plugin 'Shougo/deoplete.nvim'
+	Plugin 'zchee/deoplete-go'
 	
 	" Languages/syntax
 	Plugin 'uarun/vim-protobuf'
@@ -43,3 +46,5 @@ set guicursor=n-v-c-sm:block
 set guicursor+=i-ci-ve:ver25-blinkon10
 set guicursor+=r-cr-o:hor20-blinkon10
 
+" Completion
+let g:deoplete#enable_at_startup = 1
