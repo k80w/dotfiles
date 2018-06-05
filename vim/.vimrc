@@ -10,6 +10,8 @@ call vundle#begin()
 	Plugin 'chriskempson/base16-vim'
 	Plugin 'junegunn/goyo.vim'
 
+	Plugin 'ctrlpvim/ctrlp.vim'
+
 	Plugin 'Shougo/deoplete.nvim'
 	Plugin 'zchee/deoplete-go'
 	
