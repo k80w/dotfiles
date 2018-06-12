@@ -155,6 +155,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id ponymix decrease 5
 
 bindsym Print exec --no-startup-id screenshot
 
+bindsym $mod+l exec lock
+
 exec_always --no-startup-id ~/.config/polybar/run.sh
 exec_always --no-startup-id dunst
 exec_always --no-startup-id feh --bg-fill ~/wallpapers/bloom-blooming-blossom-263856.jpg

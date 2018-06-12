@@ -32,7 +32,7 @@ zle -N zle-keymap-select updateCursor
 zle -N zle-line-init updateCursor
 
 # Fun quote stuff
-QUOTEFILE=~/quotes.tsv
+#QUOTEFILE=~/quotes.tsv
 function centertext() {
 	printf "%*s\n" $(((${#1}+$2)/2)) "$1"
 }
@@ -54,9 +54,8 @@ function randomquote() {
 	printquote "$(getrandomquote)"
 }
 function getrandomquote() {
-	shuf -n 1 $QUOTEFILE
+	echo -e "$(fortune lemons)\t$(fortune lemonauthors)"
 }
-
 
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
@@ -67,13 +66,22 @@ bindkey "^[[B" down-line-or-beginning-search
 
 
 # Prompt
+setopt PROMPT_SUBST
+
+function promptuser() {
+	if [ "$USER" != "dnaf" ]; then
+		echo "%n "
+	fi
+}
+
 export PROMPT="
-%F{blue}%~%F{white} %# "
+$(promptuser)%F{blue}%~%F{white} %# "
 
 # Aliases
 alias vim=/usr/bin/nvim
 alias nvim="echo no"
 alias ls="ls --color"
+alias ip="ip -br -c"
 
 # Path
 export PATH=$PATH:~/bin
