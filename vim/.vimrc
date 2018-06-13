@@ -21,6 +21,7 @@ call vundle#begin()
 	Plugin 'fatih/vim-go'
 	Plugin 'tbastos/vim-lua'
 	Plugin 'leafo/moonscript-vim'
+	Plugin 'digitaltoad/vim-pug'
 	Plugin 'elixir-lang/vim-elixir'
 	Plugin 'slashmili/alchemist.vim'
 	Plugin 'pangloss/vim-javascript'

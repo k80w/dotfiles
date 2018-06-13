@@ -42,13 +42,13 @@ scroll-down = i3wm-wsprev
 inherit = bar/default
 monitor = VGA-1
 modules-left = i3
-modules-right = temperature ping battery date
+modules-right = memory cpu temperature ping battery date
 
 [bar/laptop]
 inherit = bar/default
 monitor = LVDS-1
 modules-left = i3
-modules-right = temperature ping battery date
+modules-right = memory cpu temperature ping battery date
 
 [module/battery]
 type = internal/battery
@@ -95,7 +95,7 @@ label-urgent-background = ${colors.primary}
 [module/ping]
 type = custom/script
 
-exec = ping 8.8.4.4 -n -c 1 | grep -oP "(?<=time=)[0-9\.]* ms"
+exec = ~/.config/polybar/ping.sh
 interval = 1
 
 [module/temperature]
@@ -104,5 +104,15 @@ interval = 0.1
 thermal-zone = 1
 hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
 warn-temperature = 90
+
+[module/cpu]
+type = internal/cpu
+
+interval = 0.5
+
+[module/memory]
+type = internal/memory
+
+interval = 3
 
 ; vim:ft=dosini
