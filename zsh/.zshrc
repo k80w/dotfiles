@@ -83,10 +83,10 @@ alias nvim="echo no"
 alias ls="ls --color"
 alias ip="ip -br -c"
 
-# Path
+# Variables
 export PATH=$PATH:~/bin
-
 export GOPATH=~
+export EDITOR=nvim
 
 ## Ruby gems
 if which ruby >/dev/null && which gem >/dev/null; then
