@@ -19,6 +19,7 @@ call vundle#begin()
 	Plugin 'uarun/vim-protobuf'
 	Plugin 'tikhomirov/vim-glsl'
 	Plugin 'fatih/vim-go'
+	Plugin 'dart-lang/dart-vim-plugin'
 	Plugin 'tbastos/vim-lua'
 	Plugin 'leafo/moonscript-vim'
 	Plugin 'digitaltoad/vim-pug'
