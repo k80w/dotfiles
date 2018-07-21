@@ -1,0 +1,14 @@
+#!/bin/bash
+set -x
+TAGDIR=~/tags
+
+TAG=$(basename -a $TAGDIR/* | rofi -dmenu -p "tag")
+FILE="$TAGDIR/$TAG"
+
+if [ -f "$FILE" ]; then
+	MIME=$(file -b --mime-type $FILE)
+	echo $MIME
+	xclip -selection clipboard -t "$MIME" -i "$FILE" &&
+	dunstify "Image copied to clipboard"
+fi
+
