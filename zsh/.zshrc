@@ -66,16 +66,8 @@ bindkey "^[[B" down-line-or-beginning-search
 
 
 # Prompt
-setopt PROMPT_SUBST
-
-function promptuser() {
-	if [ "$USER" != "dnaf" ]; then
-		echo "%n "
-	fi
-}
-
 export PROMPT="
-$(promptuser)%F{blue}%~%F{white} %# "
+%n@%m %F{blue}%~%F{white} %# "
 
 # Aliases
 alias vim=/usr/bin/nvim
