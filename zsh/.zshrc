@@ -10,7 +10,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 
 # Opts
-setopt appendhistory beep nomatch interactivecomments
+setopt incappendhistory beep nomatch interactivecomments
 unsetopt autocd extendedglob
 
 # Vi mode
