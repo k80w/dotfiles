@@ -9,6 +9,7 @@ call vundle#begin()
 	
 	Plugin 'chriskempson/base16-vim'
 	Plugin 'junegunn/goyo.vim'
+	Plugin 'kien/rainbow_parentheses.vim'
 
 	Plugin 'ctrlpvim/ctrlp.vim'
 
@@ -18,6 +19,7 @@ call vundle#begin()
 	" Languages/syntax
 	Plugin 'uarun/vim-protobuf'
 	Plugin 'tikhomirov/vim-glsl'
+	Plugin 'mickboldon/fountain.vim'
 	Plugin 'fatih/vim-go'
 	Plugin 'dart-lang/dart-vim-plugin'
 	Plugin 'tbastos/vim-lua'
