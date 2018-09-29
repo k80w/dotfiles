@@ -70,7 +70,7 @@ export PROMPT="
 %n@%m %F{blue}%~%F{white} %# "
 
 # Aliases
-alias vim=/usr/bin/nvim
+alias vim=nvim
 alias nvim="echo no"
 alias ls="ls --color"
 alias ip="ip -br -c"
