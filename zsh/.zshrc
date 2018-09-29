@@ -71,7 +71,6 @@ export PROMPT="
 
 # Aliases
 alias vim=nvim
-alias nvim="echo no"
 alias ls="ls --color"
 alias ip="ip -br -c"
 
