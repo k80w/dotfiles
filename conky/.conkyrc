@@ -1,0 +1,107 @@
+-- vim: ts=4 sw=4 noet ai cindent syntax=lua
+--[[
+Conky, a system monitor, based on torsmo
+
+Any original torsmo code is licensed under the BSD license
+
+All code written since the fork of torsmo is licensed under the GPL
+
+Please see COPYING for details
+
+Copyright (c) 2004, Hannu Saransaari and Lauri Hakkarainen
+Copyright (c) 2005-2012 Brenden Matthews, Philip Kovacs, et. al. (see AUTHORS)
+All rights reserved.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+]]
+
+conky.config = {
+    alignment = 'top_right',
+	double_buffer = true,
+    background = false,
+    border_width = 1,
+    cpu_avg_samples = 2,
+	default_color = 'white',
+    default_outline_color = 'white',
+    default_shade_color = 'white',
+    draw_borders = false,
+    draw_graph_borders = true,
+    draw_outline = false,
+    draw_shades = false,
+    use_xft = true,
+    font = 'scientifica:pixelsize=11',
+    gap_x = 64,
+    gap_y = 64,
+    minimum_height = 5,
+    net_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = false,
+    out_to_stderr = false,
+    extra_newline = false,
+    own_window = true,
+	own_window_transparent = true,
+	own_window_argb_visual = true,
+    own_window_class = 'Conky',
+    own_window_type = 'override',
+    stippled_borders = 0,
+    update_interval = 1.0,
+    uppercase = false,
+    use_spacer = 'none',
+    show_graph_scale = false,
+    show_graph_range = false,
+	
+	maximum_width = 256,
+	minimum_width = 256,
+}
+
+conky.text = [[
+                    .    |    ,
+                .    \   |   /    ,
+                 `.             ,'
+             .     `    """    '     ,
+               ` .    "@@@@@"    , '
+                     "@@@@@@@"
+               ~~~~~~~~~~~~~~~~~~~~~
+
+${alignc}nichibotsu
+
+battery ${color grey}${battery_percent}% $color${battery_bar}
+
+   fs / ${color grey}${fs_used_perc /}% $color${fs_bar /}
+
+$if_mpd_playing
+$alignc$mpd_smart
+$mpd_elapsed / $mpd_length $mpd_bar
+
+$endif
+${color}RESOURCES $hr
+${cpugraph 30, 120}${goto 136}${memgraph 30, 120}
+${goto 53}cpu${goto 188}mem
+$stippled_hr
+${color grey}${top cpu 1}% $color${top name 1}	${goto 136}${color grey}${top_mem mem 1}% $color${top_mem name 1}
+${color grey}${top cpu 2}% $color${top name 2}	${goto 136}${color grey}${top_mem mem 2}% $color${top_mem name 2}
+${color grey}${top cpu 3}% $color${top name 3}	${goto 136}${color grey}${top_mem mem 3}% $color${top_mem name 3}
+${color grey}${top cpu 4}% $color${top name 4}	${goto 136}${color grey}${top_mem mem 4}% $color${top_mem name 4}
+${color grey}${top cpu 5}% $color${top name 5}	${goto 136}${color grey}${top_mem mem 5}% $color${top_mem name 5}
+${color grey}${top cpu 6}% $color${top name 6}	${goto 136}${color grey}${top_mem mem 6}% $color${top_mem name 6}
+${color grey}${top cpu 7}% $color${top name 7}	${goto 136}${color grey}${top_mem mem 7}% $color${top_mem name 7}
+
+
+NETWORK $hr
+$color${if_up wlp3s0}
+$wireless_essid $stippled_hr
+${upspeedgraph wlp3s0 30, 120}${goto 136}${downspeedgraph wlp3s0 30, 120}
+${goto 0}  ${upspeed wlp3s0} ${color gray}up${goto 136}  $color${downspeed wlp3s0} ${color gray}down
+${endif}
+
+]]
