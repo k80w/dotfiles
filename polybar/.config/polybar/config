@@ -17,7 +17,8 @@ base0E = ${xrdb:base0E}
 base0F = ${xrdb:base0F}
 
 [colors]
-background = ${base16.base00}
+background = #00000000
+invert = ${base16.base00}
 foreground = ${base16.base07}
 primary = ${base16.base0A}
 
@@ -25,7 +26,8 @@ primary = ${base16.base0A}
 width = 100%
 height = 22
 
-font-0=lucy tewi:pixelsize=11
+#font-0=lucy tewi:pixelsize=11
+font-0=scientifica:pixelsize=11
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -42,13 +44,13 @@ scroll-down = i3wm-wsprev
 inherit = bar/default
 monitor = VGA-1
 modules-left = i3
-modules-right = memory cpu temperature ping battery date
+modules-right = temperature ping battery date
 
 [bar/laptop]
 inherit = bar/default
 monitor = LVDS-1
 modules-left = i3
-modules-right = memory cpu temperature ping battery date
+modules-right = temperature ping battery date
 
 [module/battery]
 type = internal/battery
@@ -59,9 +61,8 @@ adapter = ADP1
 [module/date]
 type = internal/date
 
-label = %date% %time%
+label = %time%
 
-date = %a %Y-%m-%d%
 time = %H:%M
 
 [module/i3]
@@ -73,12 +74,12 @@ pin-workspaces = true
 
 label-mode = %index%
 label-mode-padding = 1
-label-mode-foreground = ${colors.background}
+label-mode-foreground = ${colors.invert}
 label-mode-background = ${colors.primary}
 
 label-focused = %index%
 label-focused-padding = ${module/i3.label-mode-padding}
-label-focused-foreground = ${colors.background}
+label-focused-foreground = ${colors.invert}
 label-focused-background = ${colors.foreground}
 
 label-unfocused = %index%
@@ -89,7 +90,7 @@ label-visible-padding = ${module/i3.label-mode-padding}
 
 label-urgent = %index%
 label-urgent-padding = ${module/i3.label-mode-padding}
-label-urgent-foreground = ${colors.background}
+label-urgent-foreground = ${colors.invert}
 label-urgent-background = ${colors.primary}
 
 [module/ping]
