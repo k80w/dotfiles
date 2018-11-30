@@ -3,6 +3,7 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 
+" Hello, world
 " Plugins
 call vundle#begin()
 	Plugin 'VundleVim/Vundle.vim'
@@ -13,8 +14,10 @@ call vundle#begin()
 
 	Plugin 'ctrlpvim/ctrlp.vim'
 
+	Plugin 'autozimu/LanguageClient-neovim'
+
 	Plugin 'Shougo/deoplete.nvim'
-	Plugin 'zchee/deoplete-go'
+	" Plugin 'zchee/deoplete-go'
 	
 	" Languages/syntax
 	Plugin 'uarun/vim-protobuf'
@@ -33,18 +36,26 @@ call vundle#begin()
 call vundle#end()
 filetype plugin indent on
 
+" LanguageClient
+let g:LanguageClient_serverCommands = {
+	\ 'go': ['go-langserver']
+	\ }
+
 " Color stuff
 syntax enable
 hi LineNr ctermfg=8
-if $TERM =~ "rxvt-unicode-256" " Only set stuff for rxvt-unicode-256color so stuff isnt wack anywhere else
+"if $TERM =~ "rxvt-unicode-256" " Only set stuff for rxvt-unicode-256color so stuff isnt wack anywhere else
 	colorscheme base16-default-dark " Doesn't matter which base16 scheme we use unless we're in gvim
 	hi LineNr ctermbg=none
-endif
+"endif
+
+hi Comment cterm=italic
 
 set number
 set tabstop=4
 set shiftwidth=4
 set linebreak
+set list
 
 " Cursor
 " n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20

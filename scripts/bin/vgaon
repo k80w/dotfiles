@@ -4,6 +4,6 @@ VGA=VGA-1
 LAP=LVDS-1
 XR="xrandr --output $VGA"
 $XR --mode 1920x1080
-$XR --left-of $LAP
+$XR --right-of $LAP
 $XR --primary
 i3-msg restart
