@@ -75,6 +75,9 @@ conky.text = [[
 
 ${alignc}nichibotsu
 
+${alignc}${time}
+
+
 battery ${color grey}${battery_percent}% $color${battery_bar}
 
    fs / ${color grey}${fs_used_perc /}% $color${fs_bar /}
