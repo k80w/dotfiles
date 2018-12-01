@@ -10,7 +10,7 @@ rofi.hide-scrollbar: true
 
 rofi.scroll-method: 1
 
-rofi.lines: 4
+rofi.lines: 2
 
 rofi.location: 2
 
