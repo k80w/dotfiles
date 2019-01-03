@@ -17,7 +17,7 @@ call vundle#begin()
 	Plugin 'autozimu/LanguageClient-neovim'
 
 	Plugin 'Shougo/deoplete.nvim'
-	" Plugin 'zchee/deoplete-go'
+	Plugin 'zchee/deoplete-go'
 	
 	" Languages/syntax
 	Plugin 'uarun/vim-protobuf'
@@ -25,6 +25,7 @@ call vundle#begin()
 	Plugin 'mickboldon/fountain.vim'
 	Plugin 'fatih/vim-go'
 	Plugin 'dart-lang/dart-vim-plugin'
+	Plugin 'christoph-frick/vim-fennel-ft'
 	Plugin 'tbastos/vim-lua'
 	Plugin 'leafo/moonscript-vim'
 	Plugin 'digitaltoad/vim-pug'

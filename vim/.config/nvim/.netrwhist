@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/dnaf/src/gitlab.com/pkgs/riot/src/riot-web-0.16.4.new'
-let g:netrw_dirhist_2='/home/dnaf/src/gitlab.com/pkgs/riot/src/riot-web-0.16.4.new/scripts'
-let g:netrw_dirhist_3='/home/dnaf/src/github.com/dnaf/botgarrison/node_modules'
