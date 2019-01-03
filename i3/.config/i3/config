@@ -156,6 +156,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id ponymix decrease 5
 bindsym Print exec --no-startup-id screenshot
 
 bindsym $mod+l exec lock
+bindsym $mod+z exec rofi-pass
 
 exec_always --no-startup-id ~/.config/polybar/run.sh
 exec --no-startup-id conky
