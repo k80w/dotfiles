@@ -10,7 +10,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 
 # Opts
-setopt incappendhistory beep nomatch interactivecomments
+setopt incappendhistory beep nomatch interactivecomments histignorespace
 unsetopt autocd extendedglob
 
 # Vi mode
@@ -78,6 +78,7 @@ alias ip="ip -br -c"
 export PATH=$PATH:~/bin
 export GOPATH=~
 export EDITOR=nvim
+export MOZ_USE_XINPUT2=1
 
 ## Ruby gems
 if which ruby >/dev/null && which gem >/dev/null; then
