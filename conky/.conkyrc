@@ -99,12 +99,21 @@ ${color grey}${top cpu 5}% $color${top name 5}	${goto 136}${color grey}${top_mem
 ${color grey}${top cpu 6}% $color${top name 6}	${goto 136}${color grey}${top_mem mem 6}% $color${top_mem name 6}
 ${color grey}${top cpu 7}% $color${top name 7}	${goto 136}${color grey}${top_mem mem 7}% $color${top_mem name 7}
 
+${color}DISK IO $hr
+${diskiograph_read /dev/sda 30,120}${goto 136}${diskiograph_write /dev/sda 30,120}
+${goto 53}read${goto 187}write
 
-NETWORK $hr
+
+${color}NETWORK $hr
 $color${if_up wlp3s0}
-$wireless_essid $stippled_hr
+wlp3s0 $wireless_essid $stippled_hr
 ${upspeedgraph wlp3s0 30, 120}${goto 136}${downspeedgraph wlp3s0 30, 120}
 ${goto 0}  ${upspeed wlp3s0} ${color gray}up${goto 136}  $color${downspeed wlp3s0} ${color gray}down
 ${endif}
+$color${if_up tun0}tun0 $stippled_hr
+${upspeedgraph tun0 30, 120}${goto 136}${downspeedgraph tun0 30, 120}
+${goto 0}  ${upspeed tun0} ${color gray}up${goto 136}  $color${downspeed tun0} ${color gray}down
+${endif}
+
 
 ]]
