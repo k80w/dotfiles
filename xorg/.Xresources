@@ -25,7 +25,6 @@
 *color15:      _base07
 
 URxvt.cursorBlink  :1
-!URxvt.font:        xft:lucy tewi:pixelsize=11
 URxvt.font:        xft:scientifica:pixelsize=11
 URxvt.italicFont:  xft:scientifica:pixelsize=11:style=Italic:autohint=true
 URxvt.boldFont:    xft:scientifica:pixelsize=11:style=Bold:autohint=true

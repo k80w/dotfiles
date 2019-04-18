@@ -18,6 +18,8 @@ call vundle#begin()
 
 	Plugin 'Shougo/deoplete.nvim'
 	Plugin 'zchee/deoplete-go'
+
+	Plugin 'fholgado/minibufexpl.vim'
 	
 	" Languages/syntax
 	Plugin 'uarun/vim-protobuf'
@@ -41,6 +43,14 @@ filetype plugin indent on
 let g:LanguageClient_serverCommands = {
 	\ 'go': ['go-langserver']
 	\ }
+
+" Mappings
+noremap <Leader>mbe :MBEToggle<cr>
+noremap <C-H> :MBEbp<cr>
+noremap <C-L> :MBEbn<cr>
+
+noremap <C-J> <C-W>w<cr>
+noremap <C-K> <C-W>W<cr>
 
 " Color stuff
 syntax enable
