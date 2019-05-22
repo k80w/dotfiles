@@ -6,8 +6,8 @@ compinit
 
 # History
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 
 # Opts
 setopt incappendhistory beep nomatch interactivecomments histignorespace
@@ -20,12 +20,10 @@ bindkey '^H' backward-delete-char
 
 ## Vi mode cursor indicator
 function updateCursor() {
-	if [[ $TERM == rxvt-unicode* ]]; then
-		if [ $KEYMAP = vicmd ]; then # Command mode
-			echo -ne "\e[2 q" # Solid block
-		else
-			echo -ne "\e[6 q" # Vertical line
-		fi
+	if [ $KEYMAP = vicmd ]; then # Command mode
+		echo -ne "\e[2 q" # Solid block
+	else
+		echo -ne "\e[6 q" # Vertical line
 	fi
 }
 zle -N zle-keymap-select updateCursor
@@ -64,10 +62,16 @@ zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search
 bindkey "^[[B" down-line-or-beginning-search
 
+eval "$(fasd --init auto)"
 
 # Prompt
-export PROMPT="
+if [ -n "$SSH_TTY" ]; then
+	export PROMPT="
 %n@%m %F{blue}%~%F{white} %# "
+else
+	export PROMPT="
+%F{blue}%~%F{white} %# "
+fi
 
 # Aliases
 alias vim=nvim
@@ -81,9 +85,9 @@ export GOPATH=~
 export EDITOR=nvim
 export MOZ_USE_XINPUT2=1
 
-## Ruby gems
+# Ruby gems
 if which ruby >/dev/null && which gem >/dev/null; then
 	export PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi
 
-randomquote
+#randomquote

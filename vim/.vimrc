@@ -29,6 +29,7 @@ call vundle#begin()
 	Plugin 'dart-lang/dart-vim-plugin'
 	Plugin 'christoph-frick/vim-fennel-ft'
 	Plugin 'tbastos/vim-lua'
+	Plugin 'NewLunarFire/wla-vim'
 	Plugin 'leafo/moonscript-vim'
 	Plugin 'digitaltoad/vim-pug'
 	Plugin 'elixir-lang/vim-elixir'
@@ -62,6 +63,8 @@ hi LineNr ctermfg=8
 
 hi Comment cterm=italic
 
+" other
+
 set number
 set tabstop=4
 set shiftwidth=4
@@ -73,6 +76,15 @@ set list
 set guicursor=n-v-c-sm:block
 set guicursor+=i-ci-ve:ver25-blinkon10
 set guicursor+=r-cr-o:hor20-blinkon10
+
+" conceals
+set concealcursor=ni
+set conceallevel=1
+syn match Conceal '!=' conceal cchar=≠
+syn match Conceal '<=' conceal cchar=≤
+syn match Conceal '>=' conceal cchar=≥
+syn match Conceal '->' conceal cchar=→
+hi! link Conceal Normal
 
 " Completion
 let g:deoplete#enable_at_startup = 1

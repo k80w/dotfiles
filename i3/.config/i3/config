@@ -162,4 +162,4 @@ exec_always --no-startup-id ~/.config/polybar/run.sh
 exec --no-startup-id conky
 exec --no-startup-id dunst
 exec --no-startup-id compton
-exec_always --no-startup-id feh --bg-fill ~/wallpapers/bloom-blooming-blossom-263856.jpg
+exec_always --no-startup-id feh --bg-fill ~/wallpapers/bloom-blooming-blossom-794644.jpg
