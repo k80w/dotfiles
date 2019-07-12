@@ -158,6 +158,8 @@ bindsym Print exec --no-startup-id screenshot
 bindsym $mod+l exec lock
 bindsym $mod+z exec rofi-pass
 
+for_window [class="mgba-qt"] floating enable
+
 exec_always --no-startup-id ~/.config/polybar/run.sh
 exec --no-startup-id conky
 exec --no-startup-id dunst
