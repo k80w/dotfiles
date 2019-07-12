@@ -80,6 +80,9 @@ alias vim=nvim
 alias ls="ls --color"
 alias ip="ip -br -c"
 alias ledger="ledger -f ~/.ledger/ledger.dat"
+alias lptxt='lpr -o cpi=17 -o lpi=8'
+alias wpa=wpa_cli
+alias serve='python3 -m http.server'
 alias ncduc='ncdu -f ~/.cache/ncdu'
 
 # Variables
