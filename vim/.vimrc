@@ -35,6 +35,7 @@ call vundle#begin()
 	Plugin 'elixir-lang/vim-elixir'
 	Plugin 'slashmili/alchemist.vim'
 	Plugin 'pangloss/vim-javascript'
+	Plugin 'leafgarland/typescript-vim'
 	Plugin 'rust-lang/rust.vim'
 	Plugin 'vim-scripts/nginx.vim'
 call vundle#end()
