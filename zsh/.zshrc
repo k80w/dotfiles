@@ -78,6 +78,7 @@ alias vim=nvim
 alias ls="ls --color"
 alias ip="ip -br -c"
 alias ledger="ledger -f ~/.ledger/ledger.dat"
+alias ncduc='ncdu -f ~/.cache/ncdu'
 
 # Variables
 export PATH=$PATH:~/bin

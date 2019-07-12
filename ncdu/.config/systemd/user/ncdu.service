@@ -1,0 +1,8 @@
+[Unit]
+Description=NCDU scanner
+
+[Service]
+ExecStart=/usr/bin/ncdu -o %C/ncdu
+
+[Install]
+WantedBy=default.target

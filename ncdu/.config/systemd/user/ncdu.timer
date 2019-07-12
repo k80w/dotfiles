@@ -1,0 +1,8 @@
+[Unit]
+Description=Run NCDU every six hours
+
+[Timer]
+OnUnitActiveSec=6h
+
+[Install]
+WantedBy=timers.target
