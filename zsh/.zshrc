@@ -66,11 +66,13 @@ eval "$(fasd --init auto)"
 
 # Prompt
 if [ -n "$SSH_TTY" ]; then
-	export PROMPT="
-%n@%m %F{blue}%~%F{white} %# "
+	export PROMPT="%(?..%F{red}fail%f
+)
+%n@%m %F{blue}%~%F{white} %# %f"
 else
-	export PROMPT="
-%F{blue}%~%F{white} %# "
+	export PROMPT="%(?..%F{red}fail%f
+)
+%F{blue}%~%F{white} %# %f"
 fi
 
 # Aliases
