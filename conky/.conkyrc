@@ -81,6 +81,7 @@ ${alignc}${time}
 battery ${color grey}${battery_percent}% $color${battery_bar}
 
    fs / ${color grey}${fs_used_perc /}% $color${fs_bar /}
+   fs ~ ${color grey}${fs_used_perc /home/dnaf}% $color${fs_bar /home/dnaf}
 
 $if_mpd_playing
 $alignc$mpd_smart
@@ -103,14 +104,12 @@ ${color}DISK IO $hr
 ${diskiograph_read /dev/sda 30,120}${goto 136}${diskiograph_write /dev/sda 30,120}
 ${goto 53}read${goto 187}write
 
-
 ${color}NETWORK $hr
-$color${if_up wlp3s0}
+${if_up wlp3s0}$color
 wlp3s0 $wireless_essid $stippled_hr
 ${upspeedgraph wlp3s0 30, 120}${goto 136}${downspeedgraph wlp3s0 30, 120}
 ${goto 0}  ${upspeed wlp3s0} ${color gray}up${goto 136}  $color${downspeed wlp3s0} ${color gray}down
-${endif}
-$color${if_up tun0}tun0 $stippled_hr
+${endif}${if_up tun0}${color}tun0 $stippled_hr
 ${upspeedgraph tun0 30, 120}${goto 136}${downspeedgraph tun0 30, 120}
 ${goto 0}  ${upspeed tun0} ${color gray}up${goto 136}  $color${downspeed tun0} ${color gray}down
 ${endif}
